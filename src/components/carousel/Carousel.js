@@ -10,26 +10,26 @@ render(){
     
     <div>
     <img
-        alt="book1"
-        src={'./Images/bookscarousel1.jpg'}
+        alt="Book-Banner-1"
+        src={'https://i.imgur.com/vXpI5xi.jpg?1'}
       />
     </div>
     <div>
     <img
-        alt="book2"
-        src={'./Images/bookscarousel2.jpg'}
+        alt="Laptop-Banner-1"
+        src={'https://i.imgur.com/4bBdJoj.jpg?1'}
       />
     </div>
     <div>
     <img
-        alt="entrbook"
-        src={'./Images/entrancebookscarousel.jpg'}
+        alt="Mobile-Banner-1"
+        src={'https://i.imgur.com/j2pbVOG.jpg?1'}
       />
     </div>
     <div>
     <img
-        alt="mob1"
-        src={'./Images/mobcarousel1.jpg'}
+        alt="Mobile-Banner-2"
+        src={'https://i.imgur.com/DhsWtGb.jpg?1'}
       />
     </div>
     

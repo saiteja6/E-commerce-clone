@@ -1,14 +1,40 @@
 import React, { Component } from 'react'
-import {Icon} from 'antd';
+import {Icon, Drawer, Button} from 'antd';
 import './Cart.css';
-export default class Cart extends Component {
+class Cart extends Component {
+    state = { visible: false };
+
+    showDrawer = () => {
+        this.setState({
+          visible: true,
+        });
+      };
+    
+      onClose = () => {
+        this.setState({
+          visible: false,
+        });
+      };
+
     render() {
         return (
             <div>
-                Your cart is empty!
-                <br></br>
-                <a href="#" class="button">Shop now</a>
+                <Button type="link" onClick={this.showDrawer}>
+                    <Icon type="shopping-cart" /> Cart
+                </Button>
+                <Drawer
+                    title="Basic Drawer"
+                    placement="right"
+                    closable={false}
+                    onClose={this.onClose}
+                    visible={this.state.visible}
+                    >
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                    <p>Some contents...</p>
+                </Drawer>
             </div>
         )
     }
 }
+export default Cart;

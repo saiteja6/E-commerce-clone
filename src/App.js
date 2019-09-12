@@ -19,7 +19,7 @@ function App() {
         <Navbar />
         
         
-        <Router>
+        {/* <Router>
           <div>
         <ul>
           <li>
@@ -51,7 +51,7 @@ function App() {
           <Route component={Notfound} />
        </Switch>
        </div>
-      </Router>
+      </Router> */}
       </div>
        
     );

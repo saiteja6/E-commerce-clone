@@ -3,6 +3,7 @@ import { Layout, Menu, Icon, Dropdown } from 'antd';
 import Login from '../login/login';
 import Homecontent from '../home/Home';
 import Carouselism from '../carousel/Carousel';
+import Cart from '../cart/Cart';
 
 
 const { SubMenu } = Menu;
@@ -25,33 +26,24 @@ class Navbar extends React.Component {
   render() {
     return(
   <div>
-
-  <Login />
   <Layout>
     <Header className="header">
-      <div className="logo" />
       <Menu
         theme="dark"
         mode="horizontal"
-        defaultSelectedKeys={['2']}
-        style={{ lineHeight: '64px' }}
+        defaultSelectedKeys={['1']}
+        style={{ lineHeight: '64px'}}
       >
         <Menu.Item key="1">Home</Menu.Item>
-        <Menu.Item key="2">Shop by Category</Menu.Item>
-        <Dropdown overlay={menu}>
-  <a className="ant-dropdown-link" href="#">
-    Shop by C <Icon type="down" />
-  </a>
-</Dropdown>
+        <Dropdown overlay={menu} key="2">
+          <a className="ant-dropdown-link" href="#">
+              Shop by Category <Icon type="down" />
+           </a>
+        </Dropdown>
+        <Menu.Item key="3" style={{float:'right'}}><Login/></Menu.Item>
 
-
- 
-  
-        <Menu.Item key="3">Login & Signup</Menu.Item>
-
-        <Menu.Item key="4">Cart</Menu.Item>
-
-       
+        <Menu.Item key="4" style={{float:'right'}}><Cart/></Menu.Item>
+      
       </Menu>
     </Header>
     
@@ -65,17 +57,10 @@ class Navbar extends React.Component {
             minHeight: 280,
           }}
         >
-          Content
           <Carouselism />
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
-          <br></br>
+       
           <Homecontent />
         </Content>
-      {/* </Layout> */}
     </Layout>
   </Layout>
   </div>

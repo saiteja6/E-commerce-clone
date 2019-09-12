@@ -2,11 +2,11 @@
   text-align: center;
   height: 160px;
   line-height: 960px;
-  background: #364d79;
+  background: #000000;
   overflow: hidden;
 }
 
 .ant-carousel .slick-slide h3 {
-  color: #fff;
+  color: #000;
 }
   

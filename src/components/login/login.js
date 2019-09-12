@@ -17,7 +17,7 @@ class Login extends React.Component {
   render() {
     return (
       <div>
-        <Button type="primary" onClick={() => this.setModalVisible(true)}>
+        <Button type="link" onClick={() => this.setModalVisible(true)}>
           Login & Signup
         </Button>
         <Modal
@@ -58,22 +58,9 @@ class Login extends React.Component {
   </div>
 
         </Modal>
-        <br />
-        <br />
-        <Modal>
-        
-
-
-  
-          <p>some contents...</p>
-          <p>some contents...</p>
-          <p>some contents...</p>
-        </Modal>
       </div>
     );
   }
 }
-
-// ReactDOM.render(<App />, mountNode);
 
 export default Login;

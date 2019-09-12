@@ -8,7 +8,7 @@ import { Card, Col, Row } from 'antd';
 class Home extends React.Component {
   render() {
     return(
-      <div style={{ background: '#ECECEC', padding: '10px' }}>
+      <div style={{ background: '#ececec', padding: '10px' }}>
       <Row gutter={18}>
         <Col span={6}>
         
