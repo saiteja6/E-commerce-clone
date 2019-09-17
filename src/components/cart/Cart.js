@@ -20,7 +20,7 @@ class Cart extends Component {
         return (
             <div>
                 <Button type="link" onClick={this.showDrawer}>
-                    <Icon type="shopping-cart" /> Cart
+                    <Icon type="shopping-cart" />Cart
                 </Button>
                 <Drawer
                     title="Basic Drawer"
