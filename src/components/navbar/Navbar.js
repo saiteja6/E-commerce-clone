@@ -15,7 +15,6 @@ import EntranceExams from '../entrance-exams/Entrance-exams';
 const { SubMenu } = Menu;
 const { Header, Content } = Layout;
 const menu = (
-  <Router>
     <Menu>
     <SubMenu title="Electronics">
       <Menu.Item><Link to="/laptops">Laptops</Link></Menu.Item>
@@ -28,16 +27,6 @@ const menu = (
            <Link to="/entrance-exams">EntranceExams</Link></Menu.Item>
     </SubMenu>
   </Menu>
-  <Switch>
-          <Route exact path="/" component={Homecontent} />
-          <Route path="/fiction" component={Fiction} />
-          <Route path="/entrance-exams" component={EntranceExams} />
-          <Route path="/mobiles" component={Mobiles} />
-          <Route path="/laptops" component={Laptops} />
-          <Route path="/cart" component={Cart} />
-          <Route component={Notfound} />
-       </Switch>
-  </Router>
 );
 
 
@@ -78,41 +67,7 @@ class Navbar extends React.Component {
         >
           <Carouselism />
             
-          <Router>
-          <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/cart">Cart</Link>
-          </li>
-         <li>
-           <Link to="/mobiles">Mobiles</Link>
-         </li>
-         <li>
-           <Link to="/laptops">Laptops</Link>
-         </li>
-         <li>
-           <Link to="/fiction">Fiction</Link>
-         </li>
-         <li>
-           <Link to="/entrance-exams">EntranceExams</Link>
-         </li>
-         </ul>
-        <Switch>
-          <Route exact path="/" component={Homecontent} />
-          <Route path="/fiction" component={Fiction} />
-          <Route path="/entrance-exams" component={EntranceExams} />
-          <Route path="/mobiles" component={Mobiles} />
-          <Route path="/laptops" component={Laptops} />
-          <Route path="/cart" component={Cart} />
-          <Route component={Notfound} />
-       </Switch>
-       </div>
-      </Router>
-       
-          <Homecontent />
+          
         </Content>
     </Layout>
   </Layout>

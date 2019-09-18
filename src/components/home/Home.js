@@ -42,14 +42,13 @@ class Homecontent extends Component {
         <Col span={4}>
         
         {
-    data.map((item, index) => {
-      return (
-    <img
-        alt={item.title}
-        src={item.src}
-      />
-    )
-    })
+          data.map((item, index) => {
+            return (
+              <img alt={item.title}
+                  src={item.src}
+                />
+          )
+          })
   } 
         
         </Col>

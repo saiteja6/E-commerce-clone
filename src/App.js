@@ -15,45 +15,23 @@ import Cart from './components/cart/Cart';
 
 function App() {
   return (
-      <div>
-        <Navbar />
-        
-        
-        {/* <Router>
-          <div>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/cart">Cart</Link>
-          </li>
-         <li>
-           <Link to="/mobiles">Mobiles</Link>
-         </li>
-         <li>
-           <Link to="/laptops">Laptops</Link>
-         </li>
-         <li>
-           <Link to="/fiction">Fiction</Link>
-         </li>
-         <li>
-           <Link to="/entrance-exams">EntranceExams</Link>
-         </li>
-         </ul>
-        <Switch>
-          <Route exact path="/" component={Homecontent} />
-          <Route path="/fiction" component={Fiction} />
-          <Route path="/entrance-exams" component={EntranceExams} />
-          <Route path="/mobiles" component={Mobiles} />
-          <Route path="/laptops" component={Laptops} />
-          <Route path="/cart" component={Cart} />
-          <Route component={Notfound} />
-       </Switch>
-       </div>
-      </Router> */}
-      </div>
-       
+      <React.Fragment>
+        <Router>
+
+          <Navbar />
+          
+          <Switch>
+            <Route exact path="/" component={Homecontent} />
+            <Route path="/fiction" component={Fiction} />
+            <Route path="/entrance-exams" component={EntranceExams} />
+            <Route path="/mobiles" component={Mobiles} />
+            <Route path="/laptops" component={Laptops} />
+            <Route path="/cart" component={Cart} />
+            <Route component={Notfound} />
+        </Switch>
+      </Router>
+    </React.Fragment>
+      
     );
 }
 

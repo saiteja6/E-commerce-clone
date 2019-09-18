@@ -33,26 +33,10 @@ const data = [
 
 export default class Fiction extends Component {
     render() {
-        return (
-<div>
-      <div style={{ background: '#ececec', padding: '10px', display: "inline-block" }}>
-        <Col span={4}>
-        
-        {
-    data.map((item, index) => {
-      return (
-    <img
-        alt={item.title}
-        src={item.src}
-      />
-    )
-    })
-  } 
-        
-        </Col>
-      
-    </div>
-    </div>
+      return(
+      <div>
+        <h1>Fiction Books</h1>            
+       </div>  
 );
       }
     }
