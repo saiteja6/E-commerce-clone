@@ -15,16 +15,29 @@ import EntranceExams from '../entrance-exams/Entrance-exams';
 const { SubMenu } = Menu;
 const { Header, Content } = Layout;
 const menu = (
-  <Menu>
+  <Router>
+    <Menu>
     <SubMenu title="Electronics">
-      <Menu.Item>Laptops</Menu.Item>
-      <Menu.Item>Mobiles</Menu.Item>
+      <Menu.Item><Link to="/laptops">Laptops</Link></Menu.Item>
+      <Menu.Item>
+           <Link to="/mobiles">Mobiles</Link></Menu.Item>
     </SubMenu>
-    <SubMenu title="Books">
-      <Menu.Item>Fiction</Menu.Item>
-      <Menu.Item>Entrance Exams</Menu.Item>
+    <SubMenu title="Books"> 
+      <Menu.Item> <Link to="/fiction">Fiction</Link></Menu.Item>
+      <Menu.Item>
+           <Link to="/entrance-exams">EntranceExams</Link></Menu.Item>
     </SubMenu>
   </Menu>
+  <Switch>
+          <Route exact path="/" component={Homecontent} />
+          <Route path="/fiction" component={Fiction} />
+          <Route path="/entrance-exams" component={EntranceExams} />
+          <Route path="/mobiles" component={Mobiles} />
+          <Route path="/laptops" component={Laptops} />
+          <Route path="/cart" component={Cart} />
+          <Route component={Notfound} />
+       </Switch>
+  </Router>
 );
 
 
@@ -64,7 +77,7 @@ class Navbar extends React.Component {
           }}
         >
           <Carouselism />
-          
+            
           <Router>
           <div>
         <ul>

@@ -31,14 +31,6 @@ const data = [
     title: "Title 7",
     src: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
   },
-  {
-    title: "Title 8",
-    src: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-  },
-  {
-    title: "Title 9",
-    src: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-  },
 ]
 
 
@@ -46,23 +38,22 @@ class Homecontent extends Component {
   render() {
     return(
       <div>
-      <div style={{ background: '#ececec', padding: '10px' }}>
-      <Row gutter={8}>
+      <div style={{ background: '#ececec', padding: '10px', display: "inline-block" }}>
         <Col span={4}>
         
         {
     data.map((item, index) => {
-      return (<div>
+      return (
     <img
         alt={item.title}
         src={item.src}
       />
-    </div>)
+    )
     })
   } 
         
         </Col>
-      </Row>
+      
     </div>
     </div>
 );
