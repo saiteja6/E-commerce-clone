@@ -1,63 +1,75 @@
+import React, {Component} from 'react';
+import { Col, Row, Card, Icon, Avatar } from 'antd';
 
-import React from 'react';
+
+const data = [
+  {
+    title: "Title 1",
+    src: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+  },
+  {
+    title: "Title 2",
+    src: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+  },
+  {
+    title: "Title 3",
+    src: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+  },
+  {
+    title: "Title 4",
+    src: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+  },
+  {
+    title: "Title 5",
+    src: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+  },
+  {
+    title: "Title 6",
+    src: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+  },
+  {
+    title: "Title 7",
+    src: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+  },
+  {
+    title: "Title 8",
+    src: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+  },
+  {
+    title: "Title 9",
+    src: "https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
+  },
+]
 
 
-
-import { Card, Col, Row } from 'antd';
-
-class Home extends React.Component {
+class Homecontent extends Component {
   render() {
     return(
+      <div>
       <div style={{ background: '#ececec', padding: '10px' }}>
-      <Row gutter={18}>
-        <Col span={6}>
+      <Row gutter={8}>
+        <Col span={4}>
         
-        <Card title="Card title" bordered={false}
-          cover={
-          <img
-          alt="example"
-          src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-        />
-          }  
-        />
-        </Col>
-        <Col span={6}>
-        <Card title="Card title" bordered={false}
-          cover={
-          <img
-          alt="example"
-          src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-        />
-          }  
-        />
-        </Col>
-        <Col span={6}>
-        <Card title="Card title" bordered={false}
-          cover={
-          <img
-          alt="example"
-          src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-        />
-          }  
-        />
-        </Col>
-        <Col span={6}>
-        <Card title="Card title" bordered={false}
-          cover={
-          <img
-          alt="example"
-          src="https://gw.alipayobjects.com/zos/rmsportal/JiqGstEfoWAOHiTxclqi.png"
-        />
-          }  
-        />
+        {
+    data.map((item, index) => {
+      return (<div>
+    <img
+        alt={item.title}
+        src={item.src}
+      />
+    </div>)
+    })
+  } 
+        
         </Col>
       </Row>
+    </div>
     </div>
 );
       }
     }
 
-export default Home;    
+export default Homecontent;    
 
           
 
